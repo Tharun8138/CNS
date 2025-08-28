@@ -1,5 +1,7 @@
 ## EX. NO: 1 : IMPLEMENTATION OF CAESAR CIPHER
- 
+
+# Name : THARUN.V
+# Register no : 212224230290
 
 ## AIM:
 
@@ -12,11 +14,7 @@ alphabet as a circle and "wrap around". W becomes Z, X becomes A, Y bec mes B, a
 becomes C. To change a message back, each letter is replaced by the one three before it.
 
 ## EXAMPLE:
-
-
-
 ![image](https://github.com/Hemamanigandan/CNS/assets/149653568/eb9c6c43-8c80-4cdd-b9d4-91705a311c79)
-
 
 ## ALGORITHM:
 
@@ -27,8 +25,32 @@ becomes C. To change a message back, each letter is replaced by the one three be
 ### STEP-5: Display the cipher text obtained above.
 
 
-PROGRAM :-
+## PROGRAM :-
+```
+#include <stdio.h>
+#include <string.h>
+void caesarCipher(char *text, int shift) 
+{
+    for (int i = 0; text[i]; i++) 
+    {
+        if (text[i] >= 'A' && text[i] <= 'Z')
+        text[i] = ((text[i]- 'A' + shift) % 26) + 'A';
+        
+    }
+ }
+int main() 
+{
+    char text[] = "RAMYA P";
+    caesarCipher(text, 3);
+    printf("Encrypted Message: %s\n", text);
+    caesarCipher(text,-3);
+    printf("Decrypted Message: %s\n", text);
+    return 0;
+    
+}
+```
+## OUTPUT :-
+<img width="1337" height="685" alt="479468510-2330724b-ef14-4f08-8e62-c813912b709c" src="https://github.com/user-attachments/assets/a83aadae-1809-4a83-b1ad-21ad7be43ea6" />
 
-
-
-OUTPUT :-
+## RESULT :
+The program was executed successfully.
